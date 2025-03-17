@@ -1781,7 +1781,7 @@ static struct ctl_table vm_table[] = {
 #endif
 #ifdef CONFIG_SMP
 	{
-		.procname	= "stat_interval",
+		.procname	= "stat_interval_nosys",
 		.data		= &sysctl_stat_interval,
 		.maxlen		= sizeof(sysctl_stat_interval),
 		.mode		= 0644,
