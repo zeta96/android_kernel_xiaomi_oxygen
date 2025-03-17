@@ -1740,6 +1740,11 @@ static ssize_t disksize_store(struct device *dev,
 	if (!disksize)
 		return -EINVAL;
 
+	if (disksize <= (u64)(SZ_1G + SZ_512M)) {
+		disksize = (u64)SZ_2G;
+		pr_info("Overriding zram size to %llu", disksize);
+	}
+
 	down_write(&zram->init_lock);
 	if (init_done(zram)) {
 		pr_info("Cannot change disksize for initialized device\n");
