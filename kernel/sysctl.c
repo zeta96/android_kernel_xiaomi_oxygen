@@ -1656,7 +1656,7 @@ static struct ctl_table vm_table[] = {
 		.extra2		= &max_extfrag_threshold,
 	},
 	{
-		.procname	= "compact_unevictable_allowed",
+		.procname	= "compact_unevictable_allowed_nosys",
 		.data		= &sysctl_compact_unevictable_allowed,
 		.maxlen		= sizeof(int),
 		.mode		= 0644,
