@@ -1475,7 +1475,7 @@ static struct ctl_table vm_table[] = {
 		.proc_handler	= proc_dointvec,
 	},
 	{
-		.procname	= "oom_dump_tasks",
+		.procname	= "oom_dump_tasks_nosys",
 		.data		= &sysctl_oom_dump_tasks,
 		.maxlen		= sizeof(sysctl_oom_dump_tasks),
 		.mode		= 0644,
