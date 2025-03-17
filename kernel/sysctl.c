@@ -1496,7 +1496,7 @@ static struct ctl_table vm_table[] = {
 		.proc_handler	= overcommit_kbytes_handler,
 	},
 	{
-		.procname	= "page-cluster", 
+		.procname	= "page-cluster_nosys", 
 		.data		= &page_cluster,
 		.maxlen		= sizeof(int),
 		.mode		= 0644,
