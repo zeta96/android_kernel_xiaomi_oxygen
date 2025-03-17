@@ -1647,7 +1647,7 @@ static struct ctl_table vm_table[] = {
 		.proc_handler	= sysctl_compaction_handler,
 	},
 	{
-		.procname	= "extfrag_threshold",
+		.procname	= "extfrag_threshold_nosys",
 		.data		= &sysctl_extfrag_threshold,
 		.maxlen		= sizeof(int),
 		.mode		= 0644,
